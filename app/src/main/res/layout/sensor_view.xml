@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppTheme">
+    <View android:background="#ff000000"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip" />
+    <TableLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="1">
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <CheckBox android:id="@+id/enabledCB"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="#000000" />
+        </TableRow>
+    </TableLayout>
+    <!--<com.androidplot.xy.XYPlot android:id="@+id/sensorPlot"
+        android:layout_width="fill_parent" android:layout_height="150.0px" title="" />-->
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/aprLevelsPlot"
+        android:layout_width="fill_parent"
+        android:layout_height="300.0px"
+        android:layout_marginTop="10px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        androidPlot.graphWidget.marginTop="5dp"
+        androidPlot.graphWidget.marginLeft="18dp"
+        androidPlot.graphWidget.marginBottom="5dp"
+        androidPlot.graphWidget.marginRight="5dp"
+        androidPlot.graphWidget.rangeLabelPaint.textSize="30px"
+        title="X/Y/Z Levels"
+        android:visibility="visible" />
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/aprHistoryPlot"
+        android:layout_width="fill_parent"
+        android:layout_height="400.0px"
+        android:layout_marginTop="10px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        androidPlot.graphWidget.marginTop="5dp"
+        androidPlot.graphWidget.marginLeft="18dp"
+        androidPlot.graphWidget.marginBottom="5dp"
+        androidPlot.graphWidget.marginRight="5dp"
+        androidPlot.graphWidget.rangeLabelPaint.textSize="30px"
+        title="X/Y/Z History"
+        android:visibility="visible" />
+    <TableLayout android:layout_gravity="center" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:stretchColumns="*">
+        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12.0dip" android:id="@+id/sensorVal0TV"
+                android:layout_width="0.0dip" android:layout_height="wrap_content"
+                android:text="" android:layout_weight="1.0"
+                android:textColor="#6464C8" />
+            <TextView android:textSize="12.0dip" android:layout_gravity="center"
+                android:id="@+id/sensorVal1TV" android:layout_width="0.0dip"
+                android:layout_height="wrap_content" android:text="" android:layout_weight="1.0"
+                android:textColor="#64C864" />
+            <TextView android:textSize="12.0dip" android:id="@+id/sensorVal2TV"
+                android:layout_width="0.0dip" android:layout_height="wrap_content"
+                android:text="" android:layout_weight="1.0"
+                android:textColor="#FF6464" />
+        </TableRow>
+    </TableLayout>
+    <TextView android:textSize="12.0dip" android:id="@+id/eventCountTV"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="event count: "
+        android:textColor="#000000" />
+    <RadioGroup
+        android:orientation="horizontal"
+        android:id="@+id/sensorDelayRG" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingStart="60dp">
+        <RadioButton android:textSize="10.0dip" android:id="@+id/sensorDelayNormalRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true" android:text="Normal"
+            android:textColor="#000000" />
+        <RadioButton android:textSize="10.0dip" android:id="@+id/sensorDelayUiRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false" android:text="UI"
+            android:textColor="#000000" />
+        <RadioButton android:textSize="10.0dip" android:id="@+id/sensorDelayGameRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false" android:text="Game"
+            android:textColor="#000000" />
+        <RadioButton android:textSize="10.0dip" android:id="@+id/sensorDelayFastestRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false" android:text="Fastest"
+            android:textColor="#000000" />
+
+    </RadioGroup>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView android:textSize="12.0dip"
+                android:id="@+id/deltaTimeTV"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Freq : ---"
+                android:layout_column="4" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout android:layout_gravity="center" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="12.0dip"
+                android:id="@+id/OtherInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0808ff"
+                android:text="Other Info : ---"
+                android:layout_column="0"
+                android:visibility="gone" />
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <CheckBox android:id="@+id/logToSDcardCB" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Logging"
+                android:textColor="#000000" />
+            <CheckBox android:id="@+id/EnableGraphCB" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Enable Graph"
+                android:textColor="#000000"
+                android:singleLine="false" />
+            <Button android:layout_gravity="right" android:id="@+id/infoButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="More" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
+<!--
+    <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+style="@style/sample_activity">
+
+<com.androidplot.xy.XYPlot
+    android:id="@+id/mySimpleXYPlot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    androidPlot.title="A Simple XY Plot"
+    androidPlot.domainLabel="Domain"
+    androidPlot.rangeLabel="Range"
+    androidPlot.titleWidget.labelPaint.textSize="@dimen/title_font_size"
+    androidPlot.domainLabelWidget.labelPaint.textSize="@dimen/domain_label_font_size"
+    androidPlot.rangeLabelWidget.labelPaint.textSize="@dimen/range_label_font_size"
+    androidPlot.graphWidget.marginTop="20dp"
+    androidPlot.graphWidget.marginLeft="15dp"
+    androidPlot.graphWidget.marginBottom="25dp"
+    androidPlot.graphWidget.marginRight="10dp"
+    androidPlot.graphWidget.rangeLabelPaint.textSize="@dimen/range_tick_label_font_size"
+    androidPlot.graphWidget.rangeOriginLabelPaint.textSize="@dimen/range_tick_label_font_size"
+    androidPlot.graphWidget.domainLabelPaint.textSize="@dimen/domain_tick_label_font_size"
+    androidPlot.graphWidget.domainOriginLabelPaint.textSize="@dimen/domain_tick_label_font_size"
+    androidPlot.legendWidget.textPaint.textSize="@dimen/legend_text_font_size"
+    androidPlot.legendWidget.iconSizeMetrics.heightMetric.value="15dp"
+    androidPlot.legendWidget.iconSizeMetrics.widthMetric.value="15dp"
+    androidPlot.legendWidget.heightMetric.value="25dp"
+    androidPlot.legendWidget.positionMetrics.anchor="right_bottom"
+    androidPlot.graphWidget.gridLinePaint.color="#000000"/>
+</LinearLayout>!-->

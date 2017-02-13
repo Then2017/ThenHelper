@@ -1,0 +1,203 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.main.thenhelper.AddContacts"
+    android:id="@+id/addcontacts"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <RadioGroup
+            android:id="@+id/contacts_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="34dp"
+            android:layout_below="@+id/textView4">
+        </RadioGroup>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/contacts_button_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contacts_button_add"
+        android:layout_gravity="right"
+        android:width="60dp"
+        android:layout_below="@+id/contacts_checkBox_favorite"
+        android:layout_alignStart="@+id/addcalllog"
+        android:textSize="9dp" />
+
+    <CheckBox
+        android:id="@+id/contacts_checkBox_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contacts_checkBox_photo"
+        android:layout_alignTop="@+id/contacts_radiogroup"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:id="@+id/contacts_checkBox_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contacts_checkBox_favorite"
+        android:checked="false"
+        android:layout_below="@+id/contacts_radiogroup"
+        android:layout_toEndOf="@+id/contacts_checkBox_photo" />
+
+    <EditText
+        android:id="@+id/contacts_edit_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:width="400dp"
+        android:hint="*Contact counts :"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true">
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Add Contacts :     "
+        android:id="@+id/textView4"
+        android:textSize="20dp"
+        android:textColor="#0066CC"
+        android:layout_below="@+id/ContactprogressBar"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Add Call History :"
+        android:id="@+id/textView5"
+        android:textSize="20dp"
+        android:textColor="#0066CC"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/calllognum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:width="400dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true"
+        android:hint="*Call history counts :" />
+
+    <EditText
+        android:id="@+id/phonenum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:width="400dp"
+        android:hint="*Phone numbers : ++"
+        android:layout_below="@+id/calllognum"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/calllogspinner"
+        android:layout_alignParentStart="true"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/phonenum"
+        android:layout_toStartOf="@+id/contacts_checkBox_favorite" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/addcalllog"
+        android:width="60dp"
+        android:layout_below="@+id/calllogspinner"
+        android:layout_toEndOf="@+id/getcallnum"
+        android:textSize="9dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Current progress : 0  "
+        android:id="@+id/ContactProgressnum"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView4" />
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="380dp"
+        android:layout_height="20dp"
+        android:id="@+id/ContactprogressBar"
+        android:layout_below="@+id/ContactProgressnum"
+        android:layout_alignStart="@+id/ContactProgressnum" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:id="@+id/getcallnum"
+        android:layout_alignTop="@+id/addcalllog"
+        android:layout_toEndOf="@+id/textView5"
+        android:textSize="9dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Total : --"
+        android:id="@+id/showcallnum"
+        android:layout_alignBottom="@+id/getcallnum"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clean"
+        android:id="@+id/deletecall"
+        android:layout_alignTop="@+id/addcalllog"
+        android:layout_toEndOf="@+id/addcalllog"
+        android:textSize="9dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clean"
+        android:id="@+id/deletecontact"
+        android:layout_below="@+id/contacts_checkBox_favorite"
+        android:layout_toEndOf="@+id/contacts_button_add"
+        android:textSize="9dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Total : --"
+        android:id="@+id/showcontactnum"
+        android:layout_alignBottom="@+id/contacts_button_add"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:id="@+id/getcontactnum"
+        android:textSize="9dp"
+        android:layout_below="@+id/contacts_checkBox_favorite"
+        android:layout_toStartOf="@+id/contacts_button_add" />
+
+
+</RelativeLayout>

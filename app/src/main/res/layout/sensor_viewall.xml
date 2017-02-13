@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View android:background="#ff000000"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="More : "
+                android:id="@+id/textView12"
+                android:textSize="20dp"
+                android:textColor="#0066CC"
+                android:layout_below="@+id/ContactprogressBar"
+                android:layout_alignParentStart="true"
+                android:layout_column="0" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/sensorDelayRG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0">
+
+                <RadioButton
+                    android:textSize="10.0dip"
+                    android:id="@+id/sensorDelayNormalRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Normal"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:textSize="10.0dip"
+                    android:id="@+id/sensorDelayUiRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="UI"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:textSize="10.0dip"
+                    android:id="@+id/sensorDelayGameRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Game"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:textSize="10.0dip"
+                    android:id="@+id/sensorDelayFastestRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Fastest"
+                    android:textColor="#000000" />
+            </RadioGroup>
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/allsensoron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All sensor on"
+        android:layout_column="12"
+        android:layout_below="@+id/tableLayout"
+        android:layout_toStartOf="@+id/deletealllog" />
+
+    <Button
+        android:layout_gravity="right"
+        android:id="@+id/deletealllog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete all logs"
+        android:layout_column="12"
+        android:layout_below="@+id/tableLayout"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="WARNING :\nUse only one graph at the time since the current GRAPH solution might cause the GUI to lag."
+        android:id="@+id/textView14"
+        android:textColor="#000000"
+        android:layout_below="@+id/deletealllog"
+        android:layout_alignEnd="@+id/deletealllog" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Total : --"
+        android:id="@+id/totalsensor"
+        android:layout_column="10"
+        android:textColor="#000000"
+        android:layout_below="@+id/tableLayout"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

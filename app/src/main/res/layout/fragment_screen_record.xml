@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.main.thenhelper.ScreenRecord"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Audio"
+        android:id="@+id/recordaudioBox"
+        android:layout_below="@+id/recordsizespinner"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/StartRecord"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/recorddelay"
+        android:layout_toEndOf="@+id/recordaudioBox" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Float Windows"
+        android:id="@+id/recordfloatBox"
+        android:layout_below="@+id/ShowtouchBox"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recordname"
+        android:width="400dp"
+        android:hint="File Name : "
+        android:inputType="text"
+        android:layout_below="@+id/recordBitRate"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/recorddelete"
+        android:layout_alignTop="@+id/StartRecord"
+        android:layout_alignEnd="@+id/ShowlocationBox" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recordsizespinner"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/textView18"
+        android:layout_toEndOf="@+id/textView17" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Size : "
+        android:id="@+id/textView17"
+        android:layout_alignTop="@+id/recordsizespinner"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="ScreenRecord Settings : "
+        android:id="@+id/textView18"
+        android:textSize="20dp"
+        android:textColor="#0066CC"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/recordBitRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:width="400dp"
+        android:hint="Bit Rate : default is 8 Mbps"
+        android:layout_below="@+id/recordfloatBox"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Touches"
+        android:id="@+id/ShowtouchBox"
+        android:layout_below="@+id/recordaudioBox"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pointer Location"
+        android:id="@+id/ShowlocationBox"
+        android:layout_alignTop="@+id/ShowtouchBox"
+        android:layout_toEndOf="@+id/recordfloatBox" />
+
+    <EditText
+        android:id="@+id/recordCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:width="400dp"
+        android:hint="Countdown time : (s)"
+        android:layout_below="@+id/recordname"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/recorddelay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:width="400dp"
+        android:hint="Delay time : default is 3s"
+        android:layout_below="@+id/recordCountdown"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

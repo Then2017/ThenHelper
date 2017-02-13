@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ThenHelper</string>
+
+    <string name="title_section1">Main Page</string>
+    <string name="title_section2">Battery Monitor</string>
+    <string name="title_section3">Assistant</string>
+    <string name="title_section4">Add Contacts/Call history</string>
+    <string name="title_section5">Add Message/Media</string>
+    <string name="title_section6">Fill Storage</string>
+    <string name="title_section7">Sensor Monitor</string>
+    <string name="title_section8">FloatInfo Monitor</string>
+    <string name="title_section9">Screen Record</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Version</string>
+
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- 添加联系人 -->
+    <string name="contacts_textView_contactsnumber">Pls enter the numbers of contacts :</string>
+    <string name="contacts_checkBox_photo">Is including portrait?</string>
+    <string name="contacts_checkBox_favorite">Is  favorite people?</string>
+    <string name="contacts_button_add">Add</string>
+
+
+
+</resources>

@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.main.thenhelper.FloatMonitorFragment"
+    android:id="@+id/floatinfo"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brightness"
+        android:id="@+id/BrightnessBox"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Electric Current"
+        android:id="@+id/CurrentBox"
+        android:layout_below="@+id/BrightnessBox"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Progress Info"
+        android:id="@+id/PackageBox"
+        android:layout_below="@+id/CurrentBox"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/Start_floatinfo"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/PackageBox"
+        android:layout_marginBottom="86dp"
+        android:textSize="9dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIM Signal"
+        android:id="@+id/SignalBox"
+        android:layout_below="@+id/PackageBox"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WIFI Signal"
+        android:id="@+id/WIFIBox"
+        android:layout_below="@+id/SignalBox"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BT Signal"
+        android:id="@+id/BTBox"
+        android:layout_below="@+id/WIFIBox"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="You can double click float windows to change the color of float texts, and tap color button to change color of backgroud of float winsows ."
+        android:id="@+id/textView9"
+        android:layout_above="@+id/Start_floatinfo"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Pls select items :"
+        android:id="@+id/textView10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Memory and CPU (top)"
+        android:id="@+id/MemoryBox"
+        android:layout_below="@+id/BTBox"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doodle"
+        android:id="@+id/DoodleBox"
+        android:layout_below="@+id/MemoryBox"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CPU Detail (/proc/stat)"
+        android:id="@+id/CPUBox"
+        android:layout_below="@+id/DoodleBox"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

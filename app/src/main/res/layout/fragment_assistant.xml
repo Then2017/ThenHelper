@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.main.thenhelper.catchlogFragment"
+    android:id="@+id/catchlog"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TEST3"
+        android:id="@+id/StartLog"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/gifgame"
+        android:visibility="visible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TEST2"
+        android:id="@+id/Root"
+        android:layout_gravity="left|top"
+        android:textSize="9dp"
+        android:layout_alignTop="@+id/StartLog"
+        android:layout_toEndOf="@+id/StartLog"
+        android:visibility="visible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create IMEI"
+        android:id="@+id/createIMEI"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="31dp"
+        android:textSize="9dp"
+        android:layout_below="@+id/textView15"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create MAC"
+        android:id="@+id/createMAC"
+        android:layout_gravity="left|top"
+        android:textSize="9dp"
+        android:layout_alignTop="@+id/createIMEI"
+        android:layout_toEndOf="@+id/createIMEI" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TEST1"
+        android:id="@+id/gifgame"
+        android:layout_gravity="left|top"
+        android:textSize="9dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\n______________________________________________________\n"
+        android:id="@+id/textView13"
+        android:textStyle="bold"
+        android:layout_below="@+id/createIMEI"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="74dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Assistant functions"
+        android:id="@+id/textView15"
+        android:textSize="20dp"
+        android:textColor="#0066CC"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Test functions (don&apos;t touch)"
+        android:id="@+id/textView16"
+        android:textSize="20dp"
+        android:textColor="#0066CC"
+        android:layout_above="@+id/StartLog"
+        android:layout_alignParentStart="true"
+        android:visibility="visible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Root"
+        android:id="@+id/getroot"
+        android:layout_gravity="left|top"
+        android:textSize="9dp"
+        android:layout_alignBottom="@+id/createMAC"
+        android:layout_toEndOf="@+id/createMAC" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Brightness"
+        android:id="@+id/setbrightness"
+        android:layout_gravity="left|top"
+        android:textSize="9dp"
+        android:layout_below="@+id/createIMEI"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume"
+        android:id="@+id/checkvolume"
+        android:layout_gravity="left|top"
+        android:textSize="9dp"
+        android:layout_below="@+id/createMAC"
+        android:layout_toEndOf="@+id/setbrightness" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crash"
+        android:id="@+id/crashtest"
+        android:layout_gravity="left|top"
+        android:textSize="9dp"
+        android:layout_below="@+id/createMAC"
+        android:layout_toEndOf="@+id/checkvolume" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Virator off"
+        android:id="@+id/vibrator"
+        android:layout_gravity="left|top"
+        android:textSize="9dp"
+        android:layout_below="@+id/setbrightness"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

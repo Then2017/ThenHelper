@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.main.thenhelper.AddStorageFragment"
+    android:id="@+id/addstorage"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/FillStorage"
+        android:layout_below="@+id/storagesizetype"
+        android:layout_toStartOf="@+id/CleanStorage"
+        android:textSize="9dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Storage Info :"
+        android:id="@+id/StorageInfo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="380dp"
+        android:layout_height="20dp"
+        android:id="@+id/AddstorageBar"
+        android:layout_below="@+id/textView7"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clean"
+        android:id="@+id/CleanStorage"
+        android:layout_alignTop="@+id/FillStorage"
+        android:layout_alignEnd="@+id/AddstorageBar"
+        android:textSize="9dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Available Size : "
+        android:id="@+id/availablesize"
+        android:layout_below="@+id/StorageInfo"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/StorageGroup"
+        android:layout_below="@+id/AddstorageBar"
+        android:layout_toStartOf="@+id/FillStorage"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/CleanStorage">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data"
+            android:id="@+id/Dataradio" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Storage"
+            android:id="@+id/Storageradio" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SDcard"
+            android:id="@+id/SDcardradio"
+            android:layout_gravity="center_horizontal" />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/storagesize"
+        android:width="400dp"
+        android:hint="Size :"
+        android:inputType="number"
+        android:layout_below="@+id/storageDIYSize"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/storagesize"
+        android:layout_alignParentStart="true"
+        android:id="@+id/storagesizetype"
+        android:layout_alignEnd="@+id/StorageGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KB"
+            android:id="@+id/KBradio" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MB"
+            android:id="@+id/MBradio"
+            android:layout_gravity="center_horizontal" />
+
+        <RadioButton
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:text="GB"
+            android:id="@+id/GBradio" />
+    </RadioGroup>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User-defined Fill"
+        android:id="@+id/storageDIYSize"
+        android:layout_below="@+id/retainsize"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Current progress :"
+        android:id="@+id/textView7"
+        android:layout_below="@+id/availablesize"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retain Storage Size"
+        android:id="@+id/retainsizebox"
+        android:layout_below="@+id/StorageGroup"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/retainsize"
+        android:width="400dp"
+        android:hint="Size :"
+        android:inputType="number"
+        android:layout_below="@+id/retainsizebox"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25MB"
+        android:id="@+id/StorageSpeed"
+        android:textSize="9dp"
+        android:layout_alignTop="@+id/FillStorage"
+        android:layout_alignStart="@+id/AddstorageBar" />
+
+</RelativeLayout>

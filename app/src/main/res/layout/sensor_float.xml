@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00F5FF">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="More"
+        android:id="@+id/Show"
+        android:textSize="9dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/SensorName"
+        android:layout_alignParentStart="true"
+        android:visibility="visible"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="SensordataX"
+        android:id="@+id/SensorDataX"
+        android:textColor="#000000"
+        android:layout_below="@+id/Show"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="SensordataY"
+        android:id="@+id/SensorDataY"
+        android:layout_below="@+id/SensorDataX"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="SensordataZ"
+        android:id="@+id/SensorDataZ"
+        android:layout_below="@+id/SensorDataY"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Sensorname"
+        android:id="@+id/SensorName"
+        android:layout_column="0"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Color"
+        android:id="@+id/ChangeColor"
+        android:textSize="9dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/SensorName"
+        android:layout_toEndOf="@+id/Show"
+        android:textStyle="bold" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Close"
+        android:id="@+id/Close"
+        android:textSize="9dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/SensorName"
+        android:layout_toEndOf="@+id/ChangeColor"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="OtherInfo"
+        android:id="@+id/OtherInfo"
+        android:textColor="#000000"
+        android:layout_below="@+id/SensorDataZ"
+        android:layout_alignParentStart="true"
+        android:visibility="visible"
+        android:textStyle="bold"
+        android:textSize="25dp" />
+
+
+        <com.sensor.CompassView
+            android:id="@+id/compass_pointer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/compass"
+            android:layout_below="@+id/OtherInfo"
+            android:layout_alignParentStart="true" />
+
+</RelativeLayout>

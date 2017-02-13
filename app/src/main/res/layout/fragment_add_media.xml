@@ -1,0 +1,291 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.main.thenhelper.AddMediaFragment"
+    android:id="@+id/addmedia"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Add Message :     "
+        android:id="@+id/textView6"
+        android:textSize="20dp"
+        android:textColor="#0066CC"
+        android:layout_marginTop="41dp" />
+
+    <EditText
+        android:id="@+id/Messagenum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:width="400dp"
+        android:hint="*Message counts :"
+        android:layout_below="@+id/textView6"
+        android:layout_alignStart="@+id/textView6" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/addmessage"
+        android:width="60dp"
+        android:textSize="9dp"
+        android:layout_alignTop="@+id/getmessagenum"
+        android:layout_alignEnd="@+id/Messagetype" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="is the same session with one phone number?"
+        android:id="@+id/Issamesession"
+        android:layout_below="@+id/Messagenum"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp" />
+
+    <EditText
+        android:id="@+id/Messagephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:width="400dp"
+        android:hint="Phone number :"
+        android:layout_below="@+id/Issamesession"
+        android:layout_alignStart="@+id/Issamesession" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/Messagetype"
+        android:layout_below="@+id/Messagephone"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receive"
+            android:id="@+id/ReceiveMessage"
+            android:layout_gravity="center_horizontal" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:id="@+id/SendMessage" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/Messageisread"
+            android:layout_alignTop="@+id/Messagetype"
+            android:layout_alignEnd="@+id/Issamesession">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Read"
+                android:id="@+id/Messageread"
+                android:layout_gravity="right" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unread"
+                android:id="@+id/Messageunread"
+                android:layout_gravity="right" />
+        </RadioGroup>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Add Media :"
+        android:id="@+id/textView8"
+        android:textSize="20dp"
+        android:textColor="#0066CC"
+        android:layout_below="@+id/addmessage"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/medianum"
+        android:width="400dp"
+        android:hint="*Media counts :"
+        android:inputType="number"
+        android:layout_below="@+id/textView8"
+        android:layout_alignParentStart="true">
+    </EditText>
+
+    <RadioGroup android:id="@+id/MediaradioGroup"
+        android:contentDescription="media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/medianum"
+        android:layout_alignParentStart="true">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Video"
+            android:id="@+id/Videoradio"
+            android:layout_below="@+id/AddMedia"
+            android:layout_toEndOf="@+id/AddMedia" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music"
+            android:id="@+id/Musicradio"
+            android:layout_alignTop="@+id/Videoradio"
+            android:layout_centerHorizontal="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Picture"
+            android:id="@+id/Pictureradio"
+            android:layout_alignTop="@+id/Videoradio"
+            android:layout_toStartOf="@+id/AddMedia" />
+    </RadioGroup>
+
+
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="380dp"
+        android:layout_height="20dp"
+        android:id="@+id/MediaprogressBar"
+        android:layout_below="@+id/MediaProgressnum"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clean"
+        android:id="@+id/DeleteMedia"
+        android:textSize="9dp"
+        android:layout_alignTop="@+id/AddMedia"
+        android:layout_toEndOf="@+id/AddMedia" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/AddMedia"
+        android:width="60dp"
+        android:textSize="9dp"
+        android:layout_below="@+id/MediaradioGroup"
+        android:layout_toEndOf="@+id/getmessagenum" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Current progress : 0   "
+        android:id="@+id/MediaProgressnum"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView6" />
+
+    <EditText
+        android:id="@+id/Messagecontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:inputType="text"
+        android:width="400dp"
+        android:hint="Message content : "
+        android:layout_below="@+id/Messagenum"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clean"
+        android:id="@+id/deletemessage"
+        android:textSize="9dp"
+        android:layout_alignTop="@+id/addmessage"
+        android:layout_toEndOf="@+id/addmessage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Total : --"
+        android:id="@+id/showmessagenum"
+        android:layout_alignBottom="@+id/addmessage"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:id="@+id/getmessagenum"
+        android:textSize="9dp"
+        android:layout_below="@+id/messagetypeGroup"
+        android:layout_toStartOf="@+id/addmessage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Total : --"
+        android:id="@+id/showmedianum"
+        android:layout_alignBottom="@+id/getmedianum"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:id="@+id/getmedianum"
+        android:textSize="9dp"
+        android:layout_below="@+id/MediaradioGroup"
+        android:layout_toStartOf="@+id/AddMedia" />
+
+    <RadioGroup
+        android:id="@+id/messagetypeGroup"
+        android:contentDescription="media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/Messagetype"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SMS"
+            android:id="@+id/SMSradio"
+            android:layout_below="@+id/AddMedia"
+            android:layout_toEndOf="@+id/AddMedia" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MMS"
+            android:id="@+id/MMSradio"
+            android:layout_alignTop="@+id/SMSradio"
+            android:layout_centerHorizontal="true" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>

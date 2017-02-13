@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#00F5FF">
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="ThenHelper Monitor :"
+        android:id="@+id/floatinfotitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Brightness"
+        android:id="@+id/Brightness"
+        android:textColor="#FF000000"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/Show"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Electric Current"
+        android:id="@+id/Current"
+        android:textColor="#FF000000"
+        android:textStyle="bold"
+        android:layout_below="@+id/Brightness"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Current Progress Info"
+        android:id="@+id/PackageName"
+        android:layout_below="@+id/Current"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Start"
+        android:id="@+id/Start"
+        android:textStyle="bold"
+        android:layout_below="@+id/floatinfotitle"
+        android:layout_toEndOf="@+id/Show"
+        android:textSize="9dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Close"
+        android:id="@+id/Close"
+        android:textStyle="bold"
+        android:textSize="9dp"
+        android:layout_below="@+id/floatinfotitle"
+        android:layout_toEndOf="@+id/ChangeColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="SIM Signal"
+        android:id="@+id/SIMSignal"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_below="@+id/PackageName"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="WIFI Signal"
+        android:id="@+id/WIFISignal"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_below="@+id/SIMSignal"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="BT Signal"
+        android:id="@+id/BTSignal"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_below="@+id/WIFISignal"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Memory and CPU"
+        android:id="@+id/Memory"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_below="@+id/BTSignal"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="More"
+        android:id="@+id/Show"
+        android:textStyle="bold"
+        android:layout_below="@+id/floatinfotitle"
+        android:layout_alignParentStart="true"
+        android:textSize="9dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Color"
+        android:id="@+id/ChangeColor"
+        android:textStyle="bold"
+        android:textSize="9dp"
+        android:layout_below="@+id/floatinfotitle"
+        android:layout_toEndOf="@+id/Start" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Doodle"
+        android:id="@+id/Doodle"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_below="@+id/Memory"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="CPU Detail"
+        android:id="@+id/CPU"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_below="@+id/Doodle"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

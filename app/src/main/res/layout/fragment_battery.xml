@@ -1,0 +1,267 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.main.thenhelper.batteryFragment"
+    android:id="@+id/battery"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+<TextView android:layout_width="275dp" android:layout_height="202dp"
+    android:text="Battery Info"
+    android:layout_gravity="left|top"
+    android:id="@+id/BatteryInfo"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true" />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Delete Record"
+    android:id="@+id/CleanBattery"
+    android:layout_gravity="right|center_vertical"
+    android:textSize="9dp"
+    android:layout_alignParentTop="true"
+    android:layout_toEndOf="@+id/BatteryInfo"
+    android:width="70dp" />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Start  Record"
+    android:id="@+id/StartBattery"
+    android:layout_gravity="center"
+    android:textSize="9dp"
+    android:layout_alignParentTop="true"
+    android:layout_toStartOf="@+id/CleanBattery"
+    android:width="70dp" />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Statistics by time"
+    android:id="@+id/Statistics"
+    android:textSize="9dp"
+    android:width="170dp"
+    android:layout_below="@+id/BatteryLinechart"
+    android:layout_alignStart="@+id/StatisticsTAG" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="No file selected."
+    android:id="@+id/StatisticsInfo"
+    android:layout_below="@+id/textView11"
+    android:layout_alignParentStart="true" />
+
+<Button
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Start Date"
+    android:id="@+id/pickStartdate"
+    android:textSize="9dp"
+    android:width="80dp"
+    android:layout_below="@+id/SbytimeBox"
+    android:layout_alignParentStart="true" />
+
+<Button
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Start Time"
+    android:id="@+id/pickStarttime"
+    android:singleLine="false"
+    android:textSize="9dp"
+    android:width="80dp"
+    android:layout_alignTop="@+id/pickStartdate"
+    android:layout_toEndOf="@+id/pickStartdate" />
+
+<Button
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="End Time"
+    android:id="@+id/pickEndtime"
+    android:visibility="visible"
+    android:textSize="9dp"
+    android:width="80dp"
+    android:layout_alignTop="@+id/pickEnddate"
+    android:layout_toEndOf="@+id/pickEnddate" />
+
+<Button
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="End Date"
+    android:id="@+id/pickEnddate"
+    android:textSize="9dp"
+    android:width="80dp"
+    android:layout_alignTop="@+id/StatisticsTAG"
+    android:layout_alignParentStart="true" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:id="@+id/Startdate"
+    android:text="----"
+    android:width="100dp"
+    android:layout_alignTop="@+id/textView2"
+    android:layout_alignStart="@+id/Enddate" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="----"
+    android:id="@+id/Starttime"
+    android:width="70dp"
+    android:layout_alignTop="@+id/Startdate"
+    android:layout_toStartOf="@+id/StartBattery" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="----"
+    android:id="@+id/Endtime"
+    android:layout_below="@+id/Startdate"
+    android:layout_alignStart="@+id/Starttime" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="----"
+    android:id="@+id/Enddate"
+    android:width="100dp"
+    android:layout_alignBaseline="@+id/textView3"
+    android:layout_alignBottom="@+id/textView3"
+    android:layout_toEndOf="@+id/textView2" />
+
+<Button
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Select File"
+    android:id="@+id/Selectfile"
+    android:textSize="9dp"
+    android:width="170dp"
+    android:layout_below="@+id/StatisticsInfo"
+    android:layout_alignStart="@+id/Statistics" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="Statistics time :"
+    android:id="@+id/textView"
+    android:layout_alignTop="@+id/Selectfile"
+    android:layout_alignParentStart="true" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="Start :"
+    android:id="@+id/textView2"
+    android:layout_below="@+id/textView"
+    android:layout_alignParentStart="true" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="End :"
+    android:id="@+id/textView3"
+    android:layout_below="@+id/Startdate"
+    android:layout_toStartOf="@+id/Enddate" />
+
+<Button
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Start TAG"
+    android:id="@+id/StartTAG"
+    android:textSize="9dp"
+    android:layout_below="@+id/CleanBattery"
+    android:layout_toStartOf="@+id/EndTAG" />
+
+<Button
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Statistics by TAG"
+    android:id="@+id/StatisticsTAG"
+    android:width="170dp"
+    android:textSize="9dp"
+    android:layout_below="@+id/Statistics"
+    android:layout_alignEnd="@+id/CleanBattery" />
+
+<Button
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="End TAG"
+    android:id="@+id/EndTAG"
+    android:textSize="9dp"
+    android:layout_alignTop="@+id/StartTAG"
+    android:layout_alignEnd="@+id/CleanBattery" />
+
+<CheckBox
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Always wake up      "
+    android:id="@+id/iswakeup"
+    android:layout_below="@+id/BatteryInterval"
+    android:layout_alignEnd="@+id/EndTAG" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Line Chart"
+        android:id="@+id/BatteryLinechart"
+        android:textSize="9dp"
+        android:width="170dp"
+        android:layout_below="@+id/Enddate"
+        android:layout_alignEnd="@+id/CleanBattery" />
+
+    <EditText
+        android:id="@+id/BatteryInterval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:width="400dp"
+        android:hint="Interval : (ms)"
+        android:layout_below="@+id/StartTAG"
+        android:layout_alignStart="@+id/StartTAG" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Time"
+        android:id="@+id/SbytimeBox"
+        android:layout_below="@+id/Enddate"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\n__________________________________________________\n"
+        android:id="@+id/textView11"
+        android:textStyle="bold"
+        android:layout_below="@+id/BatteryInfo"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Always screen on"
+        android:id="@+id/alwaysscreenon"
+        android:layout_below="@+id/iswakeup"
+        android:layout_alignStart="@+id/iswakeup" />
+
+</RelativeLayout>
